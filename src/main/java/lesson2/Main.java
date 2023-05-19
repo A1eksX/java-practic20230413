@@ -83,8 +83,6 @@ public class Main {
         sb.append("TEST".repeat(100));
         File output = new File("Text.txt");
         FileWriter writer = new FileWriter(output);
-
-
     }
 
     private static void ex5(String pathDir) {
@@ -103,7 +101,7 @@ public class Main {
         //таким образом мы оберегаем себя от возможных исключений, и будет сразу запись в файл.
         // Остальные способы имеют ряд уязвимостей
         try (PrintWriter pw = new PrintWriter("src/main/resources/files/filesNames.txt")){
-           pw.print(sb); 
+           pw.print(sb);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
